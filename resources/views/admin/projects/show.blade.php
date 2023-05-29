@@ -4,7 +4,7 @@
 <div class="container">
 
   <div class="text-center">
-    <img src="{{ asset('storage/' . $project->thumb_preview) }}" alt="prova" class="w-50">
+    <img src="{{ asset('./storage/' . $project->thumb_preview) }}" alt="prova" class="w-50">
   </div>
   <ul> 
           <li>
@@ -21,9 +21,7 @@
             @endforeach
            </div>
          </li>
-          <li>
-             Thumb preview: <br> <img src="{{$project->thumb_preview}}" alt=""> 
-          </li>
+         
           <li>
               Descrizione: {{$project->description}}
           </li>

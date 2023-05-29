@@ -114,6 +114,8 @@ class ProjectController extends Controller
 
         $formData = $request->all();
 
+
+
         if ($request->hasFile('thumb_preview')) {
 
             if ($project->thumb_preview) {
@@ -128,7 +130,7 @@ class ProjectController extends Controller
 
         $project->update($formData);
 
-        $project->save();
+        // $project->save();
 
         if (array_key_exists('technologies', $formData)) {
             $project->technologies()->sync($formData['technologies']);
